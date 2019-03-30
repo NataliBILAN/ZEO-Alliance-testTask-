@@ -17,10 +17,9 @@ function handleCloseWindow(event) {
   event.preventDefault();
   console.log(event.target);
 
-  if (event.target === buttonClose || event.target === modalWindow || event.target === buttonCancel // event.target === buttonUninstall
-  ) {
-      modalWindow.classList.remove('modal--open');
-    }
+  if (event.target === buttonClose || event.target === modalWindow || event.target === buttonCancel) {
+    modalWindow.classList.remove('modal--open');
+  }
 }
 
 modalWindow.addEventListener('click', handleCloseWindow);

@@ -445,7 +445,8 @@ h3 {
   margin-bottom: 40px;
   color: #343843;
   text-align: center;
-  padding: 0 20px;
+  width: 56%;
+  font-size: 22px;
 }
 
 .modal__buttons-wrap {

@@ -14,12 +14,7 @@ buttonOpen.addEventListener('click', handleOpenWindow);
 function handleCloseWindow(event) {
 	event.preventDefault();
 	console.log(event.target);
-	if (
-		event.target === buttonClose ||
-		event.target === modalWindow ||
-		event.target === buttonCancel
-		// event.target === buttonUninstall
-	) {
+	if (event.target === buttonClose || event.target === modalWindow || event.target === buttonCancel) {
 		modalWindow.classList.remove('modal--open');
 	}
 }
