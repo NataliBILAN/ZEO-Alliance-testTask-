@@ -1,34 +1,34 @@
 'use strict';
 
 var buttonOpen = document.querySelector('.btn-open');
-var modalWindow = document.querySelector('.modal');
+var popupWindow = document.querySelector('.popup');
 var buttonClose = document.querySelector('.btn-close__icon');
+var useSvg = document.querySelector('.btn-close__use');
 var buttonCancel = document.querySelector('.btn-cancel');
 var buttonUninstall = document.querySelector('.btn-uninstall');
 
-function handleOpenWindow(event) {
+function handleOpenPopup(event) {
   event.preventDefault();
-  modalWindow.classList.add('modal--open');
+  popupWindow.classList.add('popup--open');
 }
 
-buttonOpen.addEventListener('click', handleOpenWindow);
+buttonOpen.addEventListener('click', handleOpenPopup);
 
-function handleCloseWindow(event) {
+function handleClosePopup(event) {
   event.preventDefault();
-  console.log(event.target);
 
-  if (event.target === buttonClose || event.target === modalWindow || event.target === buttonCancel) {
-    modalWindow.classList.remove('modal--open');
+  if (event.target === buttonClose || event.target === popupWindow || event.target === buttonCancel || event.target === useSvg) {
+    popupWindow.classList.remove('popup--open');
   }
 }
 
-modalWindow.addEventListener('click', handleCloseWindow);
+popupWindow.addEventListener('click', handleClosePopup);
 
 function handleUninstall(event) {
   event.preventDefault();
-  modalWindow.classList.remove('modal--open');
+  popupWindow.classList.remove('popup--open');
 
-  if (modalWindow.classList !== 'modal--open') {
+  if (popupWindow.classList !== 'popup--open') {
     alert('Done!');
   }
 }

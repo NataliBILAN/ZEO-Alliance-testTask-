@@ -12,24 +12,25 @@
 <body>
     <button class="btn-open">Open Popup</button>
 
-<div class="modal">
-    <div class="modal__content">
-        <a class="btn-close" href="/">
-        <svg class="btn-close__icon" width="24px" height="24px">
-            <use href="img/sprite.svg#icon-popup-close"></use>
-        </svg></a> 
-    <div class="modal__wrap-warning">
-        <svg class="modal__warning" width="100px" height="100px">
-        <use href="img/sprite.svg#icon-warning_notify-red"></use>
-        </svg>
+    <div class="popup">
+        <div class="popup__content">
+            <div class="btn-close">
+                <svg class="btn-close__icon">
+                    <use class="btn-close__use" href="img/sprite.svg#icon-popup-close"></use>
+                </svg>
+            </div> 
+            <div class="popup__wrap-warning">
+                <svg class="popup__warning">
+                    <use href="img/sprite.svg#icon-warning_notify-red"></use>
+                </svg>
+            </div>
+            <p class="popup__text">Are you sure you want uninstall the Shazam app</p>    
+            <div class="popup__buttons-wrap">
+                <button class="btn-cancel">Cancel</button>
+                <button class="btn-uninstall">Uninstall</button>
+            </div>
+        </div>
     </div>
-    <p class="modal__text">Are you sure you want uninstall the Shazam app</p>    
-    <div class="modal__buttons-wrap">
-        <button class="btn-cancel">Cancel</button>
-        <button class="btn-uninstall">Uninstall</button>
-    </div>
-    </div>
-</div>
 <script src="js/index.js"></script> 
 </body>
 </html>

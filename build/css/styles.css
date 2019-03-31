@@ -1,4 +1,4 @@
-.modal .btn-cancel,
+.btn-cancel,
 .btn-uninstall,
 .btn-open {
   padding: 10px 50px;
@@ -8,9 +8,10 @@
   outline: transparent;
   background-color: #fff;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.modal .btn-cancel:hover,
+.btn-cancel:hover,
 .btn-uninstall:hover,
 .btn-open:hover {
   background-color: #ff3b30;
@@ -403,7 +404,7 @@ h3 {
   margin: 0;
 }
 
-.modal {
+.popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -416,7 +417,7 @@ h3 {
   transition: all 0.5s ease;
 }
 
-.modal__content {
+.popup__content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -433,7 +434,7 @@ h3 {
   border-radius: 6px;
 }
 
-.modal__wrap-warning {
+.popup__wrap-warning {
   display: flex;
   align-items: center;
   width: 100px;
@@ -441,7 +442,7 @@ h3 {
   margin-bottom: 50px;
 }
 
-.modal__text {
+.popup__text {
   margin-bottom: 40px;
   color: #343843;
   text-align: center;
@@ -449,11 +450,11 @@ h3 {
   font-size: 22px;
 }
 
-.modal__buttons-wrap {
+.popup__buttons-wrap {
   display: flex;
 }
 
-.modal--open {
+.popup--open {
   opacity: 1;
   visibility: visible;
 }
@@ -463,13 +464,17 @@ h3 {
   display: block;
   top: 25px;
   left: 25px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
 }
 
-.btn-close:hover__icon {
-  color: #ff3b30;
+.btn-close__icon {
+  width: 100%;
+  height: 100%;
 }
 
-.modal .btn-cancel {
+.btn-cancel {
   margin-right: 20px;
+  padding: 10px 58px;
 }

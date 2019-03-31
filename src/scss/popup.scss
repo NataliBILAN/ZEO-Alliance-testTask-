@@ -1,4 +1,4 @@
-.modal {
+.popup {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -7,8 +7,6 @@
 	background-color: rgba(37, 45, 58, 0.7);
 	z-index: 2000;
 	visibility: hidden;
-	// transform-style: preserve-3d;
-	// transform: scale(0) rotate(20deg);
 	opacity: 0;
 	transition: all 0.5s ease;
 	&__content {
@@ -22,7 +20,6 @@
 		justify-content: center;
 		width: 580px;
 		height: 380px;
-		// padding: 50px 60px;
 		background-color: $secondary-color;
 		box-shadow: 0 4px 4px rgba(1, 2, 2, 0.2);
 		border-radius: 6px;
@@ -39,15 +36,14 @@
 		color: $main-color;
 		text-align: center;
 		width: 56%;
-		font-size: 22px;
+		font-size: $accent-font-size;
 	}
 
 	&__buttons-wrap {
 		display: flex;
 	}
 }
-.modal--open {
-	// transform: scale(1) rotate(0deg);
+.popup--open {
 	opacity: 1;
 	visibility: visible;
 }
@@ -57,20 +53,19 @@
 	display: block;
 	top: 25px;
 	left: 25px;
+	width: 25px;
+	height: 25px;
 	cursor: pointer;
-	&:hover {
-		&__icon {
-			color: $accent-color;
-		}
+	&__icon {
+		width: 100%;
+		height: 100%;
 	}
 }
-// .btn-close:hover .btn-close__icon {
-// 	fill: red;
-// }
 
-.modal .btn-cancel {
+.btn-cancel {
 	@extend %button;
 	margin-right: 20px;
+	padding: 10px 58px;
 }
 .btn-uninstall {
 	@extend %button;

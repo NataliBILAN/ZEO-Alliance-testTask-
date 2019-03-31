@@ -6,6 +6,7 @@
 	outline: transparent;
 	background-color: $secondary-color;
 	cursor: pointer;
+	transition: all 0.3s ease-in-out;
 	&:hover {
 		background-color: $accent-color;
 		color: $secondary-color;

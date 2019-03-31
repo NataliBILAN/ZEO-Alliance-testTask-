@@ -1,29 +1,34 @@
 'use strict';
 const buttonOpen = document.querySelector('.btn-open');
-const modalWindow = document.querySelector('.modal');
+const popupWindow = document.querySelector('.popup');
 const buttonClose = document.querySelector('.btn-close__icon');
+const useSvg = document.querySelector('.btn-close__use');
 const buttonCancel = document.querySelector('.btn-cancel');
 const buttonUninstall = document.querySelector('.btn-uninstall');
 
-function handleOpenWindow(event) {
+function handleOpenPopup(event) {
 	event.preventDefault();
-	modalWindow.classList.add('modal--open');
+	popupWindow.classList.add('popup--open');
 }
-buttonOpen.addEventListener('click', handleOpenWindow);
+buttonOpen.addEventListener('click', handleOpenPopup);
 
-function handleCloseWindow(event) {
+function handleClosePopup(event) {
 	event.preventDefault();
-	console.log(event.target);
-	if (event.target === buttonClose || event.target === modalWindow || event.target === buttonCancel) {
-		modalWindow.classList.remove('modal--open');
+	if (
+		event.target === buttonClose ||
+		event.target === popupWindow ||
+		event.target === buttonCancel ||
+		event.target === useSvg
+	) {
+		popupWindow.classList.remove('popup--open');
 	}
 }
-modalWindow.addEventListener('click', handleCloseWindow);
+popupWindow.addEventListener('click', handleClosePopup);
 
 function handleUninstall(event) {
 	event.preventDefault();
-	modalWindow.classList.remove('modal--open');
-	if (modalWindow.classList !== 'modal--open') {
+	popupWindow.classList.remove('popup--open');
+	if (popupWindow.classList !== 'popup--open') {
 		alert('Done!');
 	}
 }
